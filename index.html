@@ -84,9 +84,6 @@ $('body').on('click touchstart', function() {
 <style>
 
 
-.fullscreen-video-wrap {
-  transform: scale(125%);
-  }
 
 .fullscreen-video-wrap{
 
@@ -107,6 +104,13 @@ body {
      align-items: center;
      height: 100vh;
      overflow: hidden;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
 }
 </style>
 
