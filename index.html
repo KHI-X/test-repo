@@ -1,96 +1,12 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <link rel = "stylesheet" src = "style.css" />
-    <title>Document</title>
-</head>
-<body>
-
-
-    
-    <div class="fullscreen-video-wrap" id = "body">
-
-        <video loop autoplay preload="none" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto"  id="myVideo">
-        <video id="myVideo" loop autoplay preload="none" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto"  >
-            poster="https:{{ block.settings.video_image | img_url: 'master' }}">
-                <source src="https://cdn.shopify.com/videos/c/o/v/ede4a458512d4c44a896caf1133498d6.mp4" type="video/mp4">
-            </video>
-    
-  
-</div>
-<script>
-  
-const body = document.getElementsByTagName("myVideo")
-// window.onload = function() {
-//     if(video.paused) { 
-//         video.play()
-//         console.log(video.paused  + "this")
-//     }
-// } 
-if (videoElement.paused) { 
-    element.style.visibility = "visible"
-
-
-}else { 
-    element.style.visibility = "hidden"
-
-}
-// window.onload = function() { 
-//     if(video.paused) { 
-//             video.play()
-//         }else { 
-//             video.play()
-//             console.log("Is playing")
-//         }
-// }
-$('body').on('click touchstart', function() { 
-const video = document.getElementById("myVideo")
-    if(video.paused) { 
-        console.log("yeah")
-element.style.visibility = "hidden"
-        video.play()
-    }else { 
-        video.play()
-        console.log("Is playing")
-    }
-})
-</script>
-
-</body>
-<style>
-.fullscreen-video-wrap{
-    position:fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-body {
-    height: auto;
-    min-height: 100vh;
-    width: 100%;
-}
-#myVideo {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-@media only screen and (max-width: 750px) {
-    #myVideo{
-        position: fixed;
-        min-width: 100vw;
-        min-height: 100vh;
-        z-index: -10; /* Makes video a background layer */
-}
-}
-</style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+	<script src="index.js"></script>
+  </body>
 </html>
