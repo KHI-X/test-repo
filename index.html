@@ -12,7 +12,7 @@
 
 
     
-    <div class="fullscreen-video-wrap" id = "body">
+    
         
             <video loop autoplay preload="none" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto"  id="myVideo">
                 poster="https:{{ block.settings.video_image | img_url: 'master' }}">
@@ -20,7 +20,7 @@
                 </video>
         
       
-    </div>
+    
 
     <script>
       
@@ -82,19 +82,6 @@ $('body').on('click touchstart', function() {
 <style>
 
 
-
-.fullscreen-video-wrap{
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
-
-}
 
 body {
   height: auto;
