@@ -127,6 +127,16 @@ body {
   z-index: -1; /* Makes video a background layer */
   }
 }
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  margin: auto;
+  width: 60%;
+}
+
 button {
   background-color: #5f3dc4;
   color: #eee;
@@ -139,14 +149,10 @@ button {
   align-items: center;
   justify-content: center;
 }
-#container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh;
-  margin: auto;
-  width: 60%;
+@media only screen and (min-width: 750px) {
+  #container{
+    display:none;
+  }
 }
 </style>
 
