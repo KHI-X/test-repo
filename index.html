@@ -18,7 +18,7 @@
           <div id = "sim"></div>
             <div id = "container">
               <div align="center">
-                <button type="button">TAP TO ENTER OFFICE</button>
+                <button onclick = "removeButton()" id = "btn" type="button">TAP TO ENTER OFFICE</button>
               </div>
             </div>
           <video id = "video-ele" class="video-js" loop autoplay preload="none" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto" >
@@ -83,7 +83,12 @@ $('body').on('click touchstart', function() {
       }
 })
 
+function removeButton() { 
+   const button =  document.getElementById("btn");
+    button.classList.add("btnNone");
 
+
+}
   </script>
     
 </body>
@@ -148,6 +153,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 300ms ease-in-out;
+  opacity: 100%;
+}
+
+.btnNone { 
+    opacity: 0%;
+    transition: all 300ms ease-in-out;
 }
 @media only screen and (min-width: 750px) {
   #container{
