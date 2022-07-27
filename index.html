@@ -17,6 +17,7 @@
           <div id = "sim"></div>
             <div id = "container">
               <div align="center">
+              
                 <button onclick = "removeButton()" id = "btn" type="button">TAP TO ENTER OFFICE</button>
               </div>
             </div>
@@ -85,12 +86,18 @@ setInterval(function () {
 
 
 function removeButton() { 
-   const button =  document.getElementById("btn");
+   const button =  document.getElementById("image");
    console.log(video.paused)
     button.classList.add("btnNone");
+    
 
 
 }
+  function remove() { 
+   const img = document.getElementById("image");
+    img.classList.add("btnNone")
+  }
+
   </script>
     
 </body>
@@ -99,7 +106,11 @@ function removeButton() {
 
 <style>
 
-
+ img {
+  z-index: 1000;
+  object-fit: contain;
+  height: 100%;
+}
 
 .fullscreen-video-wrap{
   position:fixed;
@@ -139,9 +150,9 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  min-height: 100vh;
+  height: 100%;
   margin: auto;
-  width: 60%;
+  width: auto;
 }
 
 button {
