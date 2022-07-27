@@ -17,77 +17,76 @@
           <div id = "sim"></div>
             <div id = "container">
               <div align="center">
-                <button onclick = "removeButton()" id = "btn" type="button">TAP TO ENTER OFFICE</button>
+              
+                <img src = "kharibenardproject_Moment.jpg"  onclick = "removeButton()" id = "btn" type="button"></img>
               </div>
             </div>
-          <video id = "video-ele" class="video-js" loop autoplay preload="none" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto" >
+          <video id = "video-ele" class="video-js" loop autoplay preload="auto" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto" >
               poster="https:{{ block.settings.video_image | img_url: 'master' }}">
-                  <source src="jeremyfinalrender0001-0120.mp4" type="video/mp4">
+                  <source src="https://cdn.shopify.com/videos/c/o/v/ede4a458512d4c44a896caf1133498d6.mp4" type="video/mp4">
               </video>
       </div>
     
   </div>
 
   <script>
-      const video = document.getElementById("video-ele")
 
 const body = document.getElementsByTagName("body")
-
-// window.onload = function() {
-//     if(video.paused) { 
-//         video.play()
-//         console.log(video.paused  + "this")
-//     }
-
-// } 
 const videoElement = document.getElementById('video-ele');
-const element =  document.getElementById("sim");
+const video = document.getElementById("video-ele")
 
 
-if (videoElement.paused) { 
-  element.style.visibility = "visible"
-  
+const btn = document.getElementById("btn")
+
+// $(document).ready(function () {
+//           // Hide the div
+//           if(video.paused) {
+//             $(btn).show()
+//             console.log(video.paused + "hello")
+//           }
+          
+//           if(!video.paused){ 
+//             $("#div1").delay(6000).fadeOut(100);  
+
+//             console.log(video.paused + "fhjlskf")
+//           }
+          
+
+//       });  
 
 
+setTimeout(function () {
 
-
-
-
-
-}else { 
- element.style.visibility = "hidden"
-
-
-}
-
-
-
-// window.onload = function() { 
-//     if(video.paused) { 
-//             video.play()
-//         }else { 
-//             video.play()
-//             console.log("Is playing")
-//         }
-// }
-$('body').on('click touchstart', function() { 
+  $('body').on('click touchstart', function() { 
   const video = document.getElementById("video-ele")
       if(video.paused) { 
           console.log("yeah")
- element.style.visibility = "hidden"
           video.play()
       }else { 
           video.play()
           console.log("Is playing")
       }
-})
+});
+
+  if(video.paused) { 
+    console.log("hello")
+  }else { 
+    console.log(video.paused)
+    btn.classList.add("hideVideo")
+
+
+  }
+}, 5
+)
 
 function removeButton() { 
-   const button =  document.getElementById("btn");
-    button.classList.add("btnNone");
-
+   const img =  document.getElementById("image");
+   console.log(video.paused)
+   img.classList.add("btnNone");
 
 }
+
+
   </script>
     
 </body>
@@ -96,7 +95,11 @@ function removeButton() {
 
 <style>
 
-
+ img {
+  z-index: 1000;
+  object-fit: contain;
+  height: 100%;
+}
 
 .fullscreen-video-wrap{
   position:fixed;
@@ -160,11 +163,15 @@ button {
     opacity: 0%;
     transition: opacity 500ms ease-in-out;
 }
+.hideVideo { 
+  display: none;
+}
 @media only screen and (min-width: 750px) {
   #container{
     display:none;
   }
 }
+
 </style>
 
 
