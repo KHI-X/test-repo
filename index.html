@@ -55,7 +55,9 @@ const btn = document.getElementById("btn")
 //       });  
 
 
-setTimeout(function () {
+setInterval(function () {
+
+
 
   $('body').on('click touchstart', function() { 
   const video = document.getElementById("video-ele")
@@ -68,6 +70,8 @@ setTimeout(function () {
       }
 });
 
+
+
   if(video.paused) { 
     console.log("hello")
   }else { 
@@ -79,13 +83,20 @@ setTimeout(function () {
 }, 5
 )
 
+
+
 function removeButton() { 
-   const img =  document.getElementById("image");
+   const button =  document.getElementById("image");
    console.log(video.paused)
-   img.classList.add("btnNone");
+    button.classList.add("btnNone");
+    
+
 
 }
-
+  function remove() { 
+   const img = document.getElementById("image");
+    img.classList.add("btnNone")
+  }
 
   </script>
     
