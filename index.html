@@ -18,12 +18,12 @@
             <div id = "container">
               <div align="center">
               
-                <button onclick = "removeButton()" id = "btn" type="button">TAP TO ENTER OFFICE</button>
+                <img src = "kharibenardproject_Moment.jpg"  onclick = "removeButton()" id = "btn" type="button"></img>
               </div>
             </div>
           <video id = "video-ele" class="video-js" loop autoplay preload="auto" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto" >
               poster="https:{{ block.settings.video_image | img_url: 'master' }}">
-                  <source src="jeremyfinalrender0001-0120.mp4" type="video/mp4">
+                  <source src="https://cdn.shopify.com/videos/c/o/v/ede4a458512d4c44a896caf1133498d6.mp4" type="video/mp4">
               </video>
       </div>
     
@@ -80,7 +80,7 @@ setTimeout(function () {
 )
 
 function removeButton() { 
-   const img =  document.getElementById("btn");
+   const img =  document.getElementById("image");
    console.log(video.paused)
    img.classList.add("btnNone");
 
