@@ -17,8 +17,7 @@
           <div id = "sim"></div>
             <div id = "container">
               <div align="center">
-              
-                <img src = "kharibenardproject_Moment.jpg"  onclick = "removeButton()" id = "btn" type="button"></img>
+                <button onclick = "removeButton()" id = "btn" type="button">TAP TO ENTER OFFICE</button>
               </div>
             </div>
           <video id = "video-ele" class="video-js" loop autoplay preload="auto" muted defaultMuted playsinline  concontextmenu="return false;"  preload="auto" >
@@ -55,7 +54,9 @@ const btn = document.getElementById("btn")
 //       });  
 
 
-setTimeout(function () {
+setInterval(function () {
+
+
 
   $('body').on('click touchstart', function() { 
   const video = document.getElementById("video-ele")
@@ -68,6 +69,8 @@ setTimeout(function () {
       }
 });
 
+
+
   if(video.paused) { 
     console.log("hello")
   }else { 
@@ -79,14 +82,15 @@ setTimeout(function () {
 }, 5
 )
 
+
+
 function removeButton() { 
-   const img =  document.getElementById("image");
+   const button =  document.getElementById("btn");
    console.log(video.paused)
-   img.classList.add("btnNone");
+    button.classList.add("btnNone");
+
 
 }
-
-
   </script>
     
 </body>
@@ -95,11 +99,7 @@ function removeButton() {
 
 <style>
 
- img {
-  z-index: 1000;
-  object-fit: contain;
-  height: 100%;
-}
+
 
 .fullscreen-video-wrap{
   position:fixed;
